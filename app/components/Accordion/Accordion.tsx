@@ -25,15 +25,15 @@ export default function Accordion({
   const contentRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="bg-white rounded-lg px-4 py-3 mb-2">
+    <div className="mb-2 rounded-lg bg-white px-4 py-3">
       <div
-        className="flex justify-between items-center cursor-pointer"
+        className="flex cursor-pointer items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3 className="text-lg text-darkGrayFont font-semibold">{title}</h3>
+        <h3 className="text-lg font-semibold text-darkGrayFont">{title}</h3>
 
         <span
-          className={`w-6 h-6 flex items-center justify-center transform transition-transform duration-300 ${
+          className={`flex size-6 items-center justify-center transition-transform duration-300${
             isOpen ? 'rotate-180' : 'rotate-0'
           }`}
         >
@@ -46,13 +46,13 @@ export default function Accordion({
         </span>
       </div>
 
-      <p className="cursor-default text-lightGrayFont text-sm font-medium mt-[2px]">
+      <p className="mt-[2px] cursor-default text-sm font-medium text-lightGrayFont">
         {summary}
       </p>
 
       <div
         ref={contentRef}
-        className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+        className={`transition-max-height overflow-hidden duration-500 ease-in-out ${
           isOpen ? 'max-h-[1000px]' : 'max-h-0'
         }`}
         style={{

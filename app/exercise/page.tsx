@@ -8,8 +8,8 @@ import BackButton from '../components/BackButton/BackButton'
 
 export default function ExercisePage() {
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center">
-      <div className="flex flex-col w-full max-w-[1040px]">
+    <div className="flex min-h-screen justify-center bg-gray-100">
+      <div className="flex w-full max-w-[1040px] flex-col">
         <div className="w-full">
           <BackButton
             onClick={() => console.log('Back to home clicked')}
@@ -18,8 +18,8 @@ export default function ExercisePage() {
           />
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="flex flex-col flex-[2]">
+        <div className="flex flex-col gap-4 lg:flex-row">
+          <div className="flex flex-[2] flex-col">
             <Video />
             <p className='text-lg font-normal text-darkGrayFont'>
               This training will help you to form the core muscles which is
@@ -27,10 +27,10 @@ export default function ExercisePage() {
             </p>
           </div>
 
-          <div className="flex flex-col flex-[1] rounded-lg">
+          <div className="flex flex-[1] flex-col rounded-lg">
             <SimpleCard
               title="Training plan"
-              className="cursor-default mb-2 text-[20px] font-semibold text-darkGrayFont"
+              className="mb-2 cursor-default text-[20px] font-semibold text-darkGrayFont"
             />
             {trainingData.map((section, index) => (
               <Accordion

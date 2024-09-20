@@ -25,10 +25,10 @@ export default function TrainingInfoCard({
   ]
 
   return (
-    <div className="bg-darkBackground text-white p-4 rounded-xl flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 rounded-xl bg-darkBackground p-4 text-white">
       <h3 className="text-2xl font-bold">{title}</h3>
 
-      <div className="flex flex-wrap space-x-6 items-center">
+      <div className="flex flex-wrap items-center space-x-6">
         {infoItems.map((item, index) => (
           <IconWithText
             key={index}
