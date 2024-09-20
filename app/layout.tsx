@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header/Header'
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 })
@@ -19,10 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header /> {/* Хедер відображається на всіх сторінках */}
-        <main>{children}</main>{' '}
-        {/* Вміст кожної сторінки буде рендеритись тут */}
+      <body className={inter.className}>
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   )
