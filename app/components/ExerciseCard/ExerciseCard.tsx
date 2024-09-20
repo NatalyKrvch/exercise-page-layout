@@ -14,8 +14,8 @@ export default function ExerciseCard({
   imageUrl,
 }: ExerciseCardProps) {
   return (
-    <div className="flex items-center space-x-4 mb-4">
-      <div className="w-16 h-16 relative">
+    <div className="mb-4 flex items-center space-x-4">
+      <div className="relative size-16">
         <Image
           src={imageUrl}
           alt={title}
@@ -25,9 +25,9 @@ export default function ExerciseCard({
         />
       </div>
 
-      <div className="my-[13px] mx-[12px] cursor-default">
-        <h4 className="text-sm text-darkGrayFont font-semibold">{title}</h4>
-        <p className="text-sm text-lightGrayFont font-medium">{duration}</p>
+      <div className="mx-[12px] my-[13px] cursor-default">
+        <h4 className="text-sm font-semibold text-darkGrayFont">{title}</h4>
+        <p className="text-sm font-medium text-lightGrayFont">{duration}</p>
       </div>
     </div>
   )

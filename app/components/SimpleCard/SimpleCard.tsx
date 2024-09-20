@@ -10,7 +10,7 @@ interface CardProps {
 
 export default function SimpleCard({ title, children, className }: CardProps) {
   return (
-    <div className={`bg-white rounded-lg p-3 ${className}`}>
+    <div className={`rounded-lg bg-white p-3 ${className}`}>
       <h3>{title}</h3>
       {children && <div className="mt-2">{children}</div>}
     </div>

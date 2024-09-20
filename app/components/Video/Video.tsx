@@ -15,18 +15,18 @@ export default function Video() {
   };
 
   return (
-    <div className="flex flex-col max-w-full">
-      <div className="w-full rounded-t-xl overflow-hidden relative">
+    <div className="flex max-w-full flex-col">
+      <div className="relative w-full overflow-hidden rounded-t-xl">
         <Image
           src="/images/training-placeholder.png" // TODO: Replace with real video
           alt="Video Placeholder"
           width={1600}
           height={900}
-          className="object-cover w-full"
+          className="w-full object-cover"
         />
 
         {showOverlay && (
-          <div className="absolute inset-0 bg-black bg-opacity-15 flex justify-center items-center">
+          <div className="absolute inset-0 flex items-center justify-center bg-black/15">
             <MainButton onClick={handleButtonClick} text='BEGIN TRAINING'/>
           </div>
         )}

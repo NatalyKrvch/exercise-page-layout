@@ -16,10 +16,10 @@ export default function BackButton({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center px-3 py-3 focus:outline-none ${className}`}
+      className={`flex items-center p-3 focus:outline-none ${className}`}
       style={{ backgroundColor: 'transparent' }}
     >
-      <span className="flex items-center justify-center w-6 h-6 mr-[10px]">
+      <span className="mr-[10px] flex size-6 items-center justify-center">
         <Image
           src="/icons/arrow-left-icon.svg"
           alt="Back arrow"
@@ -28,7 +28,7 @@ export default function BackButton({
           className="object-cover"
         />
       </span>
-      <span className='text-darkGrayFont text-base font-semibold'>{text}</span>
+      <span className='text-base font-semibold text-darkGrayFont'>{text}</span>
     </button>
   )
 }

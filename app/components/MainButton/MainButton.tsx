@@ -8,7 +8,7 @@ interface MainButtonProps {
 export default function MainButton({ onClick, text }: MainButtonProps) {
   return (
     <button
-      className="bg-mainButtonColor text-darkGrayFont text-lg font-bold py-4 px-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
+      className="rounded-lg bg-mainButtonColor px-8 py-4 text-lg font-bold text-darkGrayFont shadow-md transition-shadow duration-300 ease-in-out hover:shadow-lg"
       onClick={onClick}
     >
       {text}
